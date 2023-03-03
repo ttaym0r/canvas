@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body onload="draw()">
+    <canvas id="tutorial" width="450" height="450"></canvas>
+  </body>
+  <script>
+    function draw() {
+      var canvas = document.getElementById("tutorial");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillRect(25, 25, 400, 400);
+        ctx.clearRect(50, 50, 350, 350);
+        ctx.strokeRect(100, 100, 250, 250);
+
+        ctx.beginPath();
+        ctx.moveTo(200, 225);
+        ctx.lineTo(250, 270);
+        ctx.lineTo(250, 180);
+        ctx.lineTo(200, 225);
+        ctx.stroke();
+      }
+    }
+  </script>
+</html>
